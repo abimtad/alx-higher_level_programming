@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-for i in range(0, 9):
-    for j in range(i + 1, 10):
-        if i < 8:
-            print('{}{}'.format(i, j), end=", ")
-        elif i == 8 and j == 9:
-            print('{}{}'.format(i, j))
+for tenth_dgt in range(10):
+    for once_dgt in range(tenth_dgt + 1, 10):
+        if once_dgt != 1:
+            print(", ", end='')
+        print("{0:d}{1:d}".format(tenth_dgt, once_dgt), end='')
+else:
+    print()
