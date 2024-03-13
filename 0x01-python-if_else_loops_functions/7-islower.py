@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
-
-def islower(c):
-    """check if c is lower case"""
-    if ord(c) >= 97 and ord(c) < 123:
-        return True
-    else:
-        return False
+def is_lower(c):
+    """Checks whether a character c is lower and returns a boolean value"""
+    for char in range(97, 123):
+        if ord(c) == char:
+            return True
+    return False
