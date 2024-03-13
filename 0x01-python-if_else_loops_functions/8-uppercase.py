@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def uppercase(string):
-    """Changes a string str to uppercased string"""
+    """Changes a string string to uppercased string"""
     for char in string:
         char_code = ord(char)
         if char_code in range(97, 123):
