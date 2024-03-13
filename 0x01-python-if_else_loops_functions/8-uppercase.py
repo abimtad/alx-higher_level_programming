@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
-
-def uppercase(str):
-    """a string in uppercase followed by a new line"""
-    for char in str:
-        if ord(char) >= 97 and ord(char) < 123:
-            char = chr(ord(char) - 32)
-        print("{}".format(char), end="")
-    print("")
+def uppercase(string):
+    """Changes a string str to uppercased string"""
+    for char in string:
+        char_code = ord(char)
+        if char_code in range(97, 123):
+            char_code -= 32
+        print('{0:s}'.format(chr(char_code)), end='')
+    else:
+        print()
