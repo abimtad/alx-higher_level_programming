@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 def print_list_integer(my_list=[]):
     """
     This function prints the integer values of a list, each in a new line.
