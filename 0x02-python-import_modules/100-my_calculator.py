@@ -12,21 +12,6 @@ if __name__ == "__main__":
     if sys.argv[2] not in list(solve.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-<<<<<<< HEAD
-    else:
-        a = int(sys.argv[1])
-        b = int(sys.argv[3])
-        opp = sys.argv[2]
-        if opp == "+":
-            print("{} + {} = {}".format(a, b, add(a, b)))
-        elif opp == "-":
-            print("{} - {} = {}".format(a, b, sub(a, b)))
-        elif opp == "*":
-            print("{} * {} = {}".format(a, b, mul(a,b)))
-        elif opp == "/":
-            print("{} / {} = {}".format(a, b, div(a, b)))
-=======
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     print("{} {} {} = {}".format(a, sys.argv[2], b, solve[sys.argv[2]](a, b)))
->>>>>>> e2eb5c10f9b57b7c95faaef1bb47bf300ec7a1e2
