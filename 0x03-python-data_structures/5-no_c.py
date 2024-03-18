@@ -8,8 +8,8 @@ def no_c(my_string):
     :return: Manipulated string.
     """
     new_string = ""
-    for char_idx in range(len(my_string)):
-        if my_string[char_idx] != 'c' and my_string[char_idx] != 'C':
-            new_string += my_string[char_idx]
+    for sub_string in my_string:
+        if sub_string != 'c' and sub_string != 'C':
+            new_string += sub_string
 
     return new_string
