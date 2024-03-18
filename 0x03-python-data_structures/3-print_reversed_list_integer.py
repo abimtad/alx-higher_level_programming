@@ -1,12 +1,6 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
-    """
-    The function prints the integers in the provided list -
-    in a reversed order, each on a new line.
-
-    :param my_list: The list
-
-    :return: None
-    """
-    for i in range(len(my_list) - 1, -1, -1):
-        print('{:d}'.format(my_list[i]))
+    """prints all integers of a list, in reverse order."""
+    if isinstance(my_list, list):
+        for i in reversed(my_list):
+            print("{:d}".format(i))
