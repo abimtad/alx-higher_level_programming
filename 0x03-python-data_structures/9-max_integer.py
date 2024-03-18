@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
     """
-    The function computes the maximum integer from the list given and returns it back.
+    The function computes the maximum integer from the
+    list given and returns it back.
 
     :param my_list: The list, the max int is found from.
 

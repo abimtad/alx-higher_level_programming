@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     """
-    The function prints the integers given int the matrix as a matrix of integers.
+    The function prints the integers given int the -
+    matrix as a matrix of integers.
 
     :param matrix: The two-dimensional list to print.
 

@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
     """
-    The function replaces an element at the specified index with another element and returns the copy of the list
-    without manipulating the original list.
+    The function replaces an element at the specified index with -
+    another element and returns the copy of the list without manipulating -
+    the original list.
 
     :param my_list: The list.
     :param idx: The index.

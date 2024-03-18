@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def no_c(my_string):
     """
-    The function remove every occurrence of the letters 'c' & 'C' form the string.
+    The function remove every occurrence of the letters -
+    'c' & 'C' form the string.
 
     :param my_string: The string to be manipulated.
 
