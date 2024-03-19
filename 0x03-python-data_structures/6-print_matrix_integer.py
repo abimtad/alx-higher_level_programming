@@ -1,9 +1,18 @@
-#!/usr/bin/python3
+#! /usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for n in range(len(matrix)):
-        for m in range(len(matrix[n])):
-            print("{:d}".format(matrix[n][m]), end="")
-            if m != (len(matrix[n]) - 1):
-                print(" ", end="")
+    """
+    The function prints the integers given int the matrix as a matrix of integers.
 
-        print("")
+    :param matrix: The two-dimensional list to print.
+
+    :return: None.
+    """
+    for row in matrix:
+        if not row:
+            print()
+        else:
+            for element in row:
+                if row.index(element) != len(row) - 1:
+                    print('{:d}'.format(element), end=' ')
+                else:
+                    print('{:d}'.format(element))
