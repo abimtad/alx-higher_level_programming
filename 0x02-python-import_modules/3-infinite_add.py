@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    """prints the result of the sum of all the arguments"""
-    import sys
+    from sys import argv
 
-    result = 0
-    for args in range(1, len(sys.argv)):
-        result += int(sys.argv[args])
-    print(result)
+    arguments = argv
+    Sum = 0
+    for idx in range(1, len(arguments)):
+        Sum += int(arguments[idx])
+
+    else:
+        print('{:d}'.format(Sum)
