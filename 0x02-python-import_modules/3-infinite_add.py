@@ -8,4 +8,4 @@ if __name__ == "__main__":
         Sum += int(arguments[idx])
 
     else:
-        print('{:d}'.format(Sum)
+        print('{:d}'.format(Sum))
