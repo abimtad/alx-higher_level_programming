@@ -8,6 +8,7 @@ if __name__ == "__main__":
     if num_arguments == 0:
         print("0 arguments.")
     else:
-        print("{:d} argument{:s}:".format(num_arguments, 's' if num_arguments > 1 else ''))
+        plural_suffix = 's' if num_arguments != 1 else ''
+        print(str(num_arguments) + " argument" + plural_suffix + ":")
         for idx, arg in enumerate(arguments, 1):
             print("{:d}: {:s}".format(idx, arg))
