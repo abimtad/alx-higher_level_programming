@@ -10,4 +10,4 @@ if __name__ == "__main__":
     else:
         print("{:d} argument{:s}:".format(num_arguments, 's' if num_arguments > 1 else ''))
         for idx, arg in enumerate(arguments, 1):
-            print("{:d}: {:d}".format(idx, arg)
+            print("{:d}: {:s}".format(idx, arg))
