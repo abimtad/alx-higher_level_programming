@@ -4,9 +4,9 @@ def search_replace(my_list, search, replace):
     """replaces all occurrences of
     an element by another in a new list"""
 
-    new_list = my_list[:]
-    for i in range(len(new_list)):
-        if new_list[i] == search:
-            new_list[i] = replace
+    anew_list = my_list[:]
+    for j in range(len(anew_list)):
+        if anew_list[j] == search:
+            anew_list[j] = replace
 
-    return (new_list)
+    return (anew_list)
