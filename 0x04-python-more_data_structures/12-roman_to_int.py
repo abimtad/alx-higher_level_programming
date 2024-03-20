@@ -14,12 +14,12 @@ def roman_to_int(roman_string):
             'M': 1000
             }
 
-    conv_int = 0
+    convert_int = 0
     tmp_int = 0
     for i in reversed(roman_string):
         if roman_int[i] < tmp_int:
-            conv_int -= roman_int[i]
+            convert_int -= roman_int[i]
         else:
-            conv_int += roman_int[i]
+            convert_int += roman_int[i]
         tmp_int = roman_int[i]
-    return conv_int
+    return convert_int
