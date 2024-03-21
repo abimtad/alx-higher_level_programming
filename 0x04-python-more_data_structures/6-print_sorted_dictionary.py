@@ -8,12 +8,7 @@ def print_sorted_dictionary(a_dictionary):
     :param a_dictionary: A dictionary.
 
     :return: None.
-    
-    :description: The function avoids printing a newline at the end -
-    of the last output.
     """
     sorted_keys = sorted(a_dictionary.keys())
-    for idx, key in enumerate(sorted_keys):
-        if idx:
-            print()
-        print("{0:s}: {1:}".format(key, a_dictionary[key]), end='')
+    for key in sorted_keys:
+        print("{0:s}: {1:}".format(key, a_dictionary[key]))
