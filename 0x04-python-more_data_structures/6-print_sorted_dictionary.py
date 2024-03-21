@@ -2,7 +2,7 @@
 
 def print_sorted_dictionary(a_dictionary):
     """
-    The function prints the key-value paris of a dictionary each on a new line,
+    The function prints the key-value pairs of a dictionary; each on a new line,
     with alphabetic order of keys.
 
     :param a_dictionary: A dictionary.
