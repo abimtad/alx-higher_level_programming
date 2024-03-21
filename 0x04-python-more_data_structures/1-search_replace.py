@@ -1,12 +1,16 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 
 def search_replace(my_list, search, replace):
-    """replaces all occurrences of
-    an element by another in a new list"""
+    """
+    The function searches for an element in a list and replaces every
+    occurrence of the element with another.
 
-    anew_list = my_list[:]
-    for j in range(len(anew_list)):
-        if anew_list[j] == search:
-            anew_list[j] = replace
+    :param my_list: The matrix to search for an element.
+    :param search: The element to search for.
+    :param replace: The element to replace with.
 
-    return (anew_list)
+    :return: A new list with the targeted element replaced.
+    """
+    replaced_list = [replace if x == search in my_list else x for x in my_list]
+
+    return replaced_list
