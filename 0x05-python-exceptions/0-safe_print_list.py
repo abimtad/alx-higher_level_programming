@@ -16,7 +16,7 @@ def safe_print_list(my_list=[], x=0):
             print("{0:}".format(my_list[i]), end="")
             printed_elements += 1
     except Exception:
-        print()
+        pass
     finally:
         print()
         return printed_elements
