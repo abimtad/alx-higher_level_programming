@@ -11,9 +11,7 @@ def safe_print_integer(value):
     :return: True if integer, False otherwise.
     """
     try:
-        integer = int(value)
-        print("{:d}".format(integer))
+        print("{:d}".format(value))
         return True
-    except ValueError:
+    except Exception:
         return False
-    
