@@ -15,7 +15,7 @@ class Square:
 
     @property
     def size(self):
-        """retrive current size of the square."""
+        """retrieve current size of the square."""
         return (self.__size)
 
     @size.setter
@@ -31,7 +31,7 @@ class Square:
         return (self.__size * self.__size)
 
     def __eq__(self, other):
-        """Define the == comparision to a Square."""
+        """Define the == comparison to a Square."""
         return self.area() == other.area()
 
     def __ne__(self, other):
@@ -51,5 +51,5 @@ class Square:
         return self.area() > other.area()
 
     def __ge__(self, other):
-        """Define the >= compmarison to a Square."""
+        """Define the >= comparison to a Square."""
         return self.area() >= other.area()
