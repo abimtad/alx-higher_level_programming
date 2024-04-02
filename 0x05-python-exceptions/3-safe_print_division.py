@@ -2,20 +2,18 @@
 
 def safe_print_division(a, b):
     """
-    divides 2 integers and prints the result.
+    The function computes quotient of two numbers and prints it.
 
-    Args:
-        a (int): dividend
-        b (int): diviser
+    :param a: The dividend.
+    :param b: The divisor.
 
-    Returns:
-        value of the devision, Otherwise: None
+    :return: The quotient or None, if the type or value of the -
+    operands is not appropriate.
     """
-
     try:
         result = a / b
     except (TypeError, ZeroDivisionError):
         result = None
     finally:
-        print("Inside result: {}".format(result))
-    return (result)
+        print("Inside result: {0}".format(result))
+        return result
