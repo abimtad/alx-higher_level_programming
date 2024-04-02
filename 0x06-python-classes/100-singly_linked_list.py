@@ -79,22 +79,24 @@ class SinglyLinkedList:
             values.append(str(tmp.data))
             tmp = tmp.next_node
         return ('\n'.join(values))
+
     @property
     def next_node(self):
         """retrives the data."""
         return (self.__next_node)
+
     @data.setter
     def next_node(self, value):
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 """Defines a singly linked list"""
 
 
 class SinglyLinkedList:
     """represenet a singly linked list"""
-
 
     def __int__(self):
         """intialize a singly linked list"""
