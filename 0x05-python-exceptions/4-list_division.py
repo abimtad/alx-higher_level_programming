@@ -2,31 +2,30 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     """
-    divides element by element 2 lists.
+    The function divided one element of a list by other and forms a list of quotients. If there is a problem when -
+    dividing, the list will be filled by zeros while logging the error occurred to the stdout.
 
-    Args:
-        my_list_1 (list): dividend list
-        my_list_2 (list): divider list
-        list_length (int): the number of elements to be divide
+    :param my_list_1: Lists which are dividends.
+    :param my_list_2: Lists which are divisors.
+    :param list_length: The number of elements to divide starting from the index 0(first element).
 
-    Returns:
-        new list (length = list_length) with all divisions
+    :return: A list of quotients, or an empty list if both empty lists are provided.
     """
+    result = []
 
-    result_list = []
-    result = 1
     for i in range(list_length):
         try:
-            result = my_list_1[i] / my_list_2[i]
-        except TypeError:
-            print("wrong type")
-            result = 0
+            quotient = my_list_1[i] / my_list_2[i]
+            result.append(quotient)
         except ZeroDivisionError:
             print("division by 0")
-            result = 0
+            result.append(0)
         except IndexError:
             print("out of range")
-            result = 0
+            result.append(0)
+        except TypeError:
+            print("wrong type")
+            result.append(0)
         finally:
-            result_list.append(result)
-    return result_list
+            pass
+    return result
