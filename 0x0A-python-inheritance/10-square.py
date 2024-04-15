@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define a class Square that inherits form Rectangle."""
+"""Defines a class Square that inherits form Rectangle."""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -7,7 +7,7 @@ class Square(Rectangle):
     """Represents a square."""
 
     def __init__(self, size):
-        """initialize a square.
+        """initializes a square.
 
         Args:
             size (int): the size of the square.

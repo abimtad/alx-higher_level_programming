@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Define inheritance checker."""
+"""Defines inheritance checker."""
 
 def inherits_from(obj, a_class):
-    """check if obj is inherited for a_class.
+    """checks if obj is inherited for a_class.
     
     Args:
          obj (any): The object to check.

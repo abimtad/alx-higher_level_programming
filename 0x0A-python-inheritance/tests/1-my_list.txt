@@ -123,7 +123,7 @@ The order of the original list is not altered after a call to the method.
     >>> print(my_list)
     [1, 4, 2, 3, 5]
 
-Note that lists of strings are sorted lexographicaly.
+Note that lists of strings are sorted lexographically.
 
 ::
 
