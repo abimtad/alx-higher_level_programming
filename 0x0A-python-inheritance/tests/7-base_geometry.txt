@@ -2,7 +2,7 @@
 How to Use 7-base_geometry.py
 =============================
 
-This module defines a base geometry class BaseGeometry.
+This modules defines a base geometry class BaseGeometry.
 
 Instantiation
 =============
@@ -52,7 +52,7 @@ implemented.
     Exception: area() is not implemented
 
 The second method, ``integer_validator(...)``, validates the integer value
-of a parameter. The first parameter, ``name``, is the name of the argument to
+of a paramter. The first parameter, ``name``, is the name of the argument to
 check. The second argument, ``value``, is the argument to check.
 
 ::
@@ -137,8 +137,8 @@ Both ``name`` and ``value`` must be provided. Otherwise, a TypeError is raised.
     TypeError: integer_validator() missing 1 required positional argument: 
     'value'
 
-The method assumes the parameter ``name`` will be a string, but the ``name`` of any
-the type will be printed.
+The method assumes the paramter ``name`` will be a string, but ``name`` of any
+type will be printed.
 
 ::
 
