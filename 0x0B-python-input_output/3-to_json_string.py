@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define JSON representor function."""
+"""Defines JSON representor function."""
 import json
 
 

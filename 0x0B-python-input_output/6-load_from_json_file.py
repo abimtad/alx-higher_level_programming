@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define aJSON-object creator function."""
+"""Defines aJSON-object creator function."""
 import json
 
 

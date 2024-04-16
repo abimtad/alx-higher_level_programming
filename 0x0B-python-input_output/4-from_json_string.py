@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define deserializing function."""
+"""Defines deserializing function."""
 import json
 
 

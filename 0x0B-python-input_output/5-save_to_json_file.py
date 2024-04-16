@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define a JSON-writing function."""
+"""Defines a JSON-writing function."""
 import json
 
 def save_to_json_file(my_obj, filename):

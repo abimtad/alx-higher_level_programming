@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define a writing file."""
+"""Defines a writing file."""
 
 
 def append_after(filename="", search_string="", new_string=""):

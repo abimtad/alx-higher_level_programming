@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define text appender function."""
+"""Defines text appender function."""
 
 
 def append_after(filename="", search_string="", new_string=""):
