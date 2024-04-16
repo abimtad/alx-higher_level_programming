@@ -1,20 +1,12 @@
 #!/usr/bin/python3
-"""Defines a writing file."""
+"""
+The Function that writes a string to a text file (UTF8) and
+returns the number of characters written
+"""
 
 
-def append_after(filename="", search_string="", new_string=""):
-    """Insert text after each line containing a given string in a file.
-
-    Args:
-        filename (str): The name of the file.
-        search_string (str): The string to search for within the file.
-        new_string (str): The string to insert.
+def write_file(filename="", text=""):
+    """module write_file
     """
-    text = ""
-    with open(filename) as r:
-        for line in r:
-            text += line
-            if search_string in line:
-                text += new_string
-    with open(filename, "w") as w:
-        w.write(text)
+    with open(filename, 'w') as f:
+        return f.write(text)
