@@ -1,27 +1,33 @@
 #!/usr/bin/python3
 """Class square module"""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """Square class definition"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """constructor"""
+
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """get the value of size, in a square width == height"""
+        """gets the value of size, in a square width == height"""
+
         return self.width
 
     @size.setter
     def size(self, value):
-        """set and validate size"""
+        """sets and validates size"""
+
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
         """assigns attributes"""
+
         if args and len(args) != 0:
             i = 0
             for arg in args:
@@ -53,6 +59,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """returns dictionary representation of a square"""
+
         return {
             "id": self.id,
             "size": self.size,
@@ -61,6 +68,7 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """print representation"""
+        """prints representation"""
+
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)

@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 """defines class Base"""
+
 import json
 import csv
 
 
 class Base:
     """Class Base"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
         """constructor"""
+
         if id is not None:
             self.id = id
         else:
@@ -19,6 +22,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns JSON string representation of list_dictionaries"""
+
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
@@ -26,6 +30,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
+
         filename = cls.__name__ + ".json"
         with open(filename, "w") as f:
             if list_objs is None:
@@ -37,6 +42,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation Json string"""
+
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
@@ -44,6 +50,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
+
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 instance = cls(1, 1)
@@ -55,6 +62,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
+
         filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as f:
@@ -66,6 +74,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """serializes a json to csv"""
+
         filename = str(cls.__name__) + ".csv"
         with open(filename, "w", newline="") as f:
             if list_objs is None or list_objs == []:
@@ -81,7 +90,8 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """return a list of class instances from.a csv file"""
+        """returns a list of class instances from.a csv file"""
+
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as f:

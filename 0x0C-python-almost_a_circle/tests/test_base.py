@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module contains all unittest for Base class
+"""
+
 import unittest
 from models.square import Square
 import sys
@@ -8,39 +12,31 @@ from models.base import Base
 import json
 from models.rectangle import Rectangle
 import os
-"""
-This module contains all unittest for Base class
-"""
 
 
 class TestBase(unittest.TestCase):
-    """
-    Class of functions to run tests
-    """
+    """Class of functions to run tests"""
+
     def setUp(self):
-        """
-        function to redirect stdout
-        """
+        """function to redirect stdout"""
+
         sys.stdout = StringIO()
 
     def tearDown(self):
-        """
-        cleans everything
-        """
+        """cleans everything"""
+
         sys.stdout = sys.__stdout__
 
     def test_pep8_model(self):
-        """
-        Tests for pep8 model
-        """
+        """Tests for pep8 model"""
+
         p8 = pep8.StyleGuide(quiet=True)
         p = p8.check_files(['models/base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_pep8_test(self):
-        """
-        Tests for pep8 test
-        """
+        """Tests for pep8 test"""
+
         p8 = pep8.StyleGuide(quiet=True)
         p = p8.check_files(['tests/test_models/test_base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
@@ -62,9 +58,8 @@ class TestBase(unittest.TestCase):
         self.assertIsNotNone(Base.load_from_file.__doc__)
 
     def test_id(self):
-        """
-        Test check for id 
-        """
+        """Test check for id"""
+
         Base._Base__nb_objects = 0
         b1 = Base()
         b2 = Base()
@@ -78,9 +73,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b5.id, 4)
 
     def test_from_json_string(self):
-        """
-        Test check from json string
-        """
+        """Test check from json string"""
+
         self.assertEqual(Base.to_json_string(None), "[]")
         self.assertEqual(Base.to_json_string([]), "[]")
         with self.subTest():
@@ -99,27 +93,24 @@ class TestBase(unittest.TestCase):
                                                                '"y": 8}]'))
 
     def test_rectangle(self):
-        """
-        Test check for rectangle
-        """
+        """Test check for rectangle"""
+
         R1 = Rectangle(4, 5, 6)
         R1_dict = R1.to_dictionary()
         R2 = Rectangle.create(**R1_dict)
         self.assertNotEqual(R1, R2)
 
     def test_square(self):
-        """
-        Test check for square creation
-        """
+        """Test check for square creation"""
+
         S1 = Square(44, 55, 66, 77)
         S1_dict = S1.to_dictionary()
         S2 = Rectangle.create(**S1_dict)
         self.assertNotEqual(S1, S2)
 
     def test_file_rectangle(self):
-        """
-        Test check if file loads from rectangle
-        """
+        """Test check if file loads from rectangle"""
+
         R1 = Rectangle(33, 34, 35, 26)
         R2 = Rectangle(202, 2)
         lR = [R1, R2]
@@ -128,9 +119,8 @@ class TestBase(unittest.TestCase):
         self.assertNotEqual(lR, lR2)
 
     def test_file_square(self):
-        """
-        Test check if file loads from square
-        """
+        """ Test check if file loads from square"""
+
         S1 = Square(22)
         S2 = Square(44, 44, 55, 66)
         lS = [S1, S2]
