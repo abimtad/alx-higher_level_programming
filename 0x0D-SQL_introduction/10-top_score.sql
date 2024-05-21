@@ -1,4 +1,4 @@
--- lists all contents of second_table ranked by score
+-- lists all contents of second table ranked by score
 -- records are listed in descending order
 SELECT `score`, `name`
 FROM `second_table`
