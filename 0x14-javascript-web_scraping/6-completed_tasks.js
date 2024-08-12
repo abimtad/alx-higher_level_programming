@@ -1,16 +1,23 @@
 #!/usr/bin/node
-const req = require('request');
-req(process.argv[2], function (error, response, body) {
-  if (!error) {
-    const bodies = JSON.parse(body);
-    const completed = {};
-    bodies.forEach((user) => {
-      if (user.completed && completed[user.userId] === undefined) {
-        completed[user.userId] = 1;
-      } else if (user.completed) {
-        completed[user.userId] += 1;
-      }
-    });
-    console.log(completed);
+// web scrapper
+
+const request = require('request');
+
+request.get(process.argv[2], { json: true }, (error, response, body) => {
+  if (error) {
+    console.log(error);
+    return;
   }
+
+  const tasksCompleted = {};
+  body.forEach((todo) => {
+    if (todo.completed) {
+      if (!tasksCompleted[todo.userId]) {
+        tasksCompleted[todo.userId] = 1;
+      } else {
+        tasksCompleted[todo.userId] += 1;
+      }
+    }
+  });
+  console.log(tasksCompleted);
 });
