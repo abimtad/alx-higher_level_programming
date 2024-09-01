@@ -1,23 +1,35 @@
 #!/usr/bin/node
-// web scrapper
+
+const args = process.argv.slice(2);
+
+if (args.length < 1) {
+  console.log('Usage: 6-completed_tasks.js <URL>');
+  process.exit(1);
+}
+
+const URL = args[0];
 
 const request = require('request');
 
-request.get(process.argv[2], { json: true }, (error, response, body) => {
-  if (error) {
-    console.log(error);
-    return;
+request(URL, (err, _, body) => {
+  if (err) {
+    process.exit(1);
   }
 
-  const tasksCompleted = {};
-  body.forEach((todo) => {
-    if (todo.completed) {
-      if (!tasksCompleted[todo.userId]) {
-        tasksCompleted[todo.userId] = 1;
-      } else {
-        tasksCompleted[todo.userId] += 1;
-      }
+  const response = JSON.parse(body);
+
+  const result = {};
+
+  for (const task of response) {
+    if (!task.completed) continue;
+
+    if (!(task.userId in result)) {
+      result[task.userId] = 1;
+    } else {
+      result[task.userId] += 1;
     }
-  });
-  console.log(tasksCompleted);
+  }
+
+  console.log(result);
+  process.exit(0);
 });
